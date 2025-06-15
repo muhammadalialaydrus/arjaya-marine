@@ -1,0 +1,78 @@
+.modal {
+	.modal-content {
+		border-radius: 14px;
+	}
+
+	.modal-header {
+		padding: 20px 16px;
+		border-bottom: 0;
+		
+		@include breakpoint(tablet) {
+			padding: 30px 20px 20px;
+		}
+
+		.close {
+			font-size: 2em;
+			text-align: center;
+			color: $title-color;
+			line-height: 32px;
+			width: 32px;
+			height: 32px;
+			margin: 0;
+			padding: 0;
+			background-color: $form-background;
+			opacity: 1;
+			border-radius: 100%;
+			text-shadow: none;
+			transition: all 0.3s linear;
+			
+			@include breakpoint(tablet) {
+				width: 34px;
+				height: 34px;
+				line-height: 34px;
+				margin: 1px 0;
+			}
+
+			&:hover {
+				@include breakpoint(desktop) {
+					background-color: $red;
+					color: $white;
+					opacity: 1;
+				}
+			}
+
+			span {
+				display: block;
+			}
+		}
+
+		.modal-title {
+			font-family: 'lato-black';
+			font-size: 1.8em;
+			text-transform: uppercase;
+			color: $title-color;
+			line-height: 130%;
+			
+			@include breakpoint(tablet) {
+				font-size: 2em;
+			}
+		}
+	}
+
+	.modal-body {
+		padding: 0 16px;
+		
+		@include breakpoint(tablet) {
+			padding: 0 20px;
+		}
+	}
+
+	.modal-footer {
+		padding: 20px 16px;
+		border-top: 0;
+
+		@include breakpoint(tablet) {
+			padding: 30px 20px;
+		}
+	}
+}

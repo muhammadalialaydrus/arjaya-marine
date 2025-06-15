@@ -1,0 +1,34 @@
+.certificate {
+	.wrapper-image {
+		margin: 8% 9%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+	}
+
+	.frame {
+		position: relative;
+		z-index: 1;
+	}
+
+	.wrapper {
+		@include breakpoint(tablet) {
+			padding: 0 50px;
+		}
+
+		@include breakpoint(wide) {
+			padding: 0 6%;
+		}
+	}
+
+	.certificate-image {
+		margin: 10px 30px;
+		
+		@include breakpoint(tablet) {
+			margin: 15px 0;
+		}
+	}
+}

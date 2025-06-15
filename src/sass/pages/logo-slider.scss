@@ -1,0 +1,72 @@
+.logo-slider {
+	.container {
+		+ .slider-area {
+			margin-top: 30px;
+
+			@include breakpoint(tablet) {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	.slider-row {
+		padding-bottom: 30px;
+
+		.slick-dots {
+			bottom: 0;
+
+			li {
+				button {
+					background-color: rgba($black, 0.1);
+				}
+
+				&.slick-active {
+					button {
+						background-color: $red;
+					}
+				}
+			}
+		}
+	}
+
+	.slider-area {
+		.slider-list {
+			cursor: grab;
+			padding: 0 5px;
+			
+			@include breakpoint(tablet) {
+				padding: 0 10px;
+			}
+		}
+
+		.box-slider {
+			border: 1px solid #ddd;
+			background-color: $white;
+			padding: 10px 0;
+			overflow: hidden;
+			// border-radius: 30px;
+		}
+
+		.image-area {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			figure {
+				width: 80%;
+				height: 50px;
+
+				@include breakpoint(wide) {
+					height: 70px;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					object-position: center;
+				}
+			}
+		}
+	}
+}

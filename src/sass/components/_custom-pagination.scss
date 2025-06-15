@@ -1,0 +1,127 @@
+.pagination-area {
+	margin-top: 60px;
+
+	.pagination {
+		ul {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				margin: 0 4px;
+
+				&.disabled {
+					a {
+						opacity: 0.8;
+						color: #B6B6B7;
+
+						&:hover {
+							@include breakpoint(desktop) {
+								background-color: $section-color;
+								opacity: 0.8;
+								color: #B6B6B7;
+							}
+						}
+					}
+				}
+
+				&.active {
+					a {
+						color: $white;
+						background-color: $red;
+						cursor: default;
+						
+						&:hover {
+							@include breakpoint(desktop) {
+								background-color: $red;
+							}
+						}
+					}
+				}
+
+				a {
+					font-family: 'lato-black';
+					color: $body-color;
+					text-align: center;
+					line-height: 30px;
+					display: block;
+					padding: 0;
+					width: 30px;
+					height: 30px;
+					background-color: $section-color;
+					border: 0;
+					border-radius: 100%;
+
+					&:hover {
+						@include breakpoint(desktop) {
+							color: $white;
+							background-color: #B6B6B7;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.pagination {
+	.page-item {
+		margin: 0 4px;
+
+		&.disabled {
+			.page-link {
+				opacity: 0.8;
+				color: #B6B6B7;
+
+				&:hover {
+					@include breakpoint(desktop) {
+						background-color: $section-color;
+						opacity: 0.8;
+						color: #B6B6B7;
+					}
+				}
+			}
+		}
+
+		&.active {
+			.page-link {
+				color: $white;
+				background-color: $red;
+				
+				&:hover {
+					@include breakpoint(desktop) {
+						background-color: $red;
+					}
+				}
+			}
+		}
+
+		.page-link {
+			font-family: 'lato-black';
+			color: $body-color;
+			text-align: center;
+			line-height: 30px;
+			padding: 0;
+			width: 30px;
+			height: 30px;
+			background-color: $section-color;
+			border: 0;
+			border-radius: 100%;
+
+			&:hover {
+				@include breakpoint(desktop) {
+					color: $white;
+					background-color: #B6B6B7;
+				}
+			}
+
+			i {
+				font-size: 1.4em;
+				line-height: 30px;
+			}
+		}
+	}
+}

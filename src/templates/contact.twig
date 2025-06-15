@@ -1,0 +1,20 @@
+{% extends 'layouts/default.twig' %}
+{% set body_class = 'contact' %}
+{% set head_title = 'Contact' %}
+{% block page %}
+			<section class="map-contact">
+				<div class="map" data-aos="fade-in">
+					<div id="map-header"></div>
+					<!-- <div id="map-canvas"></div> -->
+						<iframe width="2560" height="1600" frameborder="0" style="border:0;width: 100%;height: 100%;" src="https://www.google.com/maps/embed/v1/place?q=arjayamarine&amp;key=AIzaSyC41txvb55lPFJ_4QpudYNx0qMojfgu8Rw" allowfullscreen=""></iframe>
+					<div class="map-iframe">
+
+						<!-- <iframe width="800" height="550" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyC41txvb55lPFJ_4QpudYNx0qMojfgu8Rw&center=-5.8876609,106.0761233&zoom=18&maptype=satellite" allowfullscreen></iframe> -->
+
+
+						<!-- <iframe width="800" height="550" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=arjayamarine&key=AIzaSyC41txvb55lPFJ_4QpudYNx0qMojfgu8Rw" allowfullscreen></iframe> -->
+					</div>
+					<div id="map-footer"></div>
+				</div>
+			</section>
+{% endblock %}

@@ -1,0 +1,123 @@
+.form {
+	.form-control {
+		color: $body-color;
+		font-size: 1em;
+		padding: 8px 12px;
+		height: auto;
+		border: 0;
+		background-color: $form-background;
+		outline: 0;
+		border-radius: 6px;
+
+		@include breakpoint(tablet) {
+			padding: 10px 16px;
+		}
+
+
+		&:focus {
+			box-shadow: none;	
+		}
+	}
+
+	textarea {
+		&.form-control {
+			height: 160px;
+			resize: none;
+		}
+	}
+
+	::-webkit-input-placeholder {
+		color: #B6B6B7;
+	}
+
+	:-moz-placeholder {
+		color: #B6B6B7;
+	}
+
+	::-moz-placeholder {
+		color: #B6B6B7;
+	}
+
+	:-ms-input-placeholder {  
+		color: #B6B6B7;
+	}
+
+	.form-group {
+		position: relative;
+		margin: 0;
+
+		+.form-group {
+			margin-top: 10px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 16px;
+			}
+		}
+
+		&.col-md-6 {
+			.help-block {
+				@include breakpoint(tablet) {
+					right: 5px;
+				}
+			}
+		}
+
+		&.has-error {
+			.form-control {
+				background-color: #ffe0e2;
+			}
+
+			::-webkit-input-placeholder {
+				color: $red;
+			}
+
+			:-moz-placeholder {
+				color: $red;
+			}
+
+			::-moz-placeholder {
+				color: $red;
+			}
+
+			:-ms-input-placeholder {  
+				color: $red;
+			}
+
+			.icon-down {
+				color: $red;
+			}
+		}
+
+		.help-block {
+			color: $red;
+			margin: 0;
+			font-weight: normal;
+			font-size: 0.65em;
+			pointer-events: none;
+			position: absolute;
+			top: 6px;
+			right: 0;
+			bottom: initial;
+			left: initial;
+			letter-spacing: 0.2pt;
+			
+			@include breakpoint(tablet) {
+				font-size: 0.8em;
+				top: 3px;
+			}
+		}
+
+		label {
+			font-family: 'lato-bold';
+			font-size: 0.7em;
+			text-transform: uppercase;
+			letter-spacing: 0.5pt;
+			line-height: 100%;
+			padding: 0;
+			
+			@include breakpoint(tablet) {
+				font-size: 0.8em;
+			}
+		}
+	}
+}

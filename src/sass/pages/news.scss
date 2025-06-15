@@ -1,0 +1,290 @@
+.thumbnail-news {
+	padding: 10px 5px;
+	
+	@include breakpoint(tablet) {
+		padding: 10px;
+	}
+
+	.thumbnail-wrapper {
+		position: relative;
+		border: 1px solid #dedede;
+		// overflow: hidden;
+		// border-radius: 30px;
+	}
+
+	.click-area {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.image-area {
+		figure {
+			width: 100%;
+			height: 0;
+			padding: 0 0 66.6%;
+			position: relative;
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				transition: all 0.3s linear;
+			}
+		}
+	}
+
+	.info-area {
+		padding: 1.5rem;
+		background-color: #f3f4f6;
+	
+		@include breakpoint(tablet) {
+			padding: 26px 20px;
+		}
+
+		.category-label {
+			font-size: 0.8rem;
+			text-transform: uppercase;
+			display: block;
+			color: #a2a2a2;
+
+			+ p {
+				margin-top: 6px;
+			}
+		}
+
+		p {
+			font-size: 1.1rem;
+			font-family: 'lato-bold';
+			line-height: 130%;
+			text-align: left;
+			color: #000;
+			transition: all 0.3s linear;
+		}
+	}
+
+	&.square-image {
+		.image-area {
+			figure {
+				padding: 0 0 100%;
+			}
+		}
+	}
+
+	&:hover {
+		.image-area {
+			figure {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+
+		.info-area {
+			p {
+				color: $red;
+			}
+		}
+	}
+}
+
+.sidebar-news {
+	.sidebar-category {
+		background-color: #f3f4f6;
+		padding: 2rem;
+		border: 1px solid #dedede;
+		// overflow: hidden;
+		// border-radius: 30px;
+	}
+
+	.sidebar-group {
+		h5 {
+			font-size: 1.1rem;
+			font-family: 'lato-black';
+			text-transform: uppercase;
+			line-height: 100%;
+			color: $red;
+
+			+ .sidebar-list {
+				margin-top: 0.5rem;
+			}
+		}
+
+		.sidebar-list {
+			padding: 0;
+			list-style: none;
+
+			&.nested {
+				padding-left: 20px;
+				border-top: 1px solid #dedede;
+
+				li {
+					position: relative;
+
+					&:before {
+						content: "";
+						position: absolute;
+						top: -1px;
+						bottom: -1px;
+						left: -20px;
+						right: initial;
+						width: 1px;
+						background-color: #b5b5b5;
+					}
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 50%;
+						bottom: initial;
+						left: -20px;
+						right: initial;
+						width: 10px;
+						height: 1px;
+						background-color: #b5b5b5;
+						transform: translate(0, -50%);
+					}
+
+					&:last-child {
+						&:before {
+							height: calc(50% + 1px);
+						}
+					}
+				}
+			}
+
+			li {
+				+ li {
+					border-top: 1px solid #dedede;
+				}
+			}
+
+			a {
+				font-size: 1.1rem;
+				font-family: 'lato-bold';
+				line-height: 120%;
+				position: relative;
+				z-index: 1;
+				color: #666;
+				display: block;
+				padding: 0.75rem 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 10px;
+
+				&:hover {
+					color: $red;
+				}
+
+				&.active {
+					color: $white;
+
+					&:before {
+						content: "";
+						position: absolute;
+						z-index: -1;
+						background-color: $red;
+						top: 0;
+						bottom: 0;
+						left: -1rem;
+						right: -1rem;
+						border-radius: 30px;
+					}
+				}
+
+			}
+		}
+
+		+ .sidebar-group {
+			margin-top: 2rem;
+		}
+	}
+}
+
+.article-slider {
+	.container {
+		+ .article-section {
+			margin-top: 30px;
+
+			@include breakpoint(tablet) {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	.slider-area {
+		padding-bottom: 30px;
+
+		.slick-dots {
+			bottom: 0;
+
+			li {
+				button {
+					background-color: rgba($black, 0.1);
+				}
+
+				&.slick-active {
+					button {
+						background-color: $red;
+					}
+				}
+			}
+		}
+	}
+}
+
+.article-news {
+	.article-area {
+		.row {
+			[class*="col-"] {
+				+ [class*="col-"] {
+					margin-top: 3rem;
+					
+					@include breakpoint(tablet) {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.content-area {
+		@include breakpoint(tablet) {
+			margin-top: -10px;
+			padding-left: 20px;
+		}
+
+		@include breakpoint(wide) {
+			padding-left: 30px;
+		}
+
+		.content-wrapper {
+			+ .paging-area {
+				margin-top: 2rem;
+			}
+		}
+
+		.row {
+			[class*="col-"] {
+				+ [class*="col-"] {
+					margin-top: 0.5rem;
+					
+					@include breakpoint(tablet) {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
