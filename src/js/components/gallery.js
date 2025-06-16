@@ -159,9 +159,9 @@
 	});
 
 	$('.logo-slider.partner-slider .slider-row').slick({
-		centerMode: true,
+		centerMode: false,
 		centerPadding: '20%',
-		slidesToShow: 5,
+		slidesToShow: 7,
 		infinite: true,
 		autoplay: true,
 		autoplaySpeed: 5000,
@@ -173,21 +173,23 @@
 			{
 				breakpoint: 1500,
 				settings: {
+					centerMode: false,
 					centerPadding: '15%',
-					slidesToShow: 5,
+					slidesToShow: 6,
 				}
 			},
 			{
 				breakpoint: 770,
 				settings: {
+					centerMode: false,
 					centerPadding: '10%',
-					slidesToShow: 3,
+					slidesToShow: 4,
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
-					// centerMode: false,
+					centerMode: true,
 					slidesToShow: 1,
 				}
 			}
@@ -195,9 +197,9 @@
 	});
 
 	$('.logo-slider.client-slider .slider-row').slick({
-		centerMode: true,
+		centerMode: false,
 		centerPadding: '20%',
-		slidesToShow: 5,
+		slidesToShow: 7,
 		infinite: true,
 		autoplay: true,
 		autoplaySpeed: 5000,
@@ -209,21 +211,23 @@
 			{
 				breakpoint: 1500,
 				settings: {
+					centerMode: false,
 					centerPadding: '15%',
-					slidesToShow: 5,
+					slidesToShow: 6,
 				}
 			},
 			{
 				breakpoint: 770,
 				settings: {
+					centerMode: false,
 					centerPadding: '10%',
-					slidesToShow: 3,
+					slidesToShow: 4,
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
-					// centerMode: false,
+					centerMode: true,
 					slidesToShow: 1,
 				}
 			}
@@ -231,9 +235,9 @@
 	});
 
 	$('.article-slider .article-section .slider-area').slick({
-		centerMode: true,
+		centerMode: false,
 		centerPadding: '20%',
-		slidesToShow: 3,
+		slidesToShow: 6,
 		infinite: true,
 		autoplay: true,
 		autoplaySpeed: 5000,
@@ -245,13 +249,23 @@
 			{
 				breakpoint: 1500,
 				settings: {
+					centerMode: false,
 					centerPadding: '15%',
-					slidesToShow: 3,
+					slidesToShow: 5,
+				}
+			},
+			{
+				breakpoint: 1190,
+				settings: {
+					centerMode: false,
+					centerPadding: '15%',
+					slidesToShow: 4,
 				}
 			},
 			{
 				breakpoint: 770,
 				settings: {
+					centerMode: true,
 					centerPadding: '10%',
 					slidesToShow: 2,
 				}
@@ -259,7 +273,7 @@
 			{
 				breakpoint: 480,
 				settings: {
-					// centerMode: false,
+					centerMode: true,
 					slidesToShow: 1,
 				}
 			}
