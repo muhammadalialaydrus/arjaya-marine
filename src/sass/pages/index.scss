@@ -351,6 +351,38 @@
 		}
 	}
 
+	.about-info-slider {
+		padding-bottom: 30px;
+		
+		@include breakpoint(wide) {
+			padding-bottom: 0;
+		}
+
+		.slick-dots {
+			bottom: 0;
+
+			li {
+				button {
+					background-color: rgba($black, 0.1);
+				}
+
+				&.slick-active {
+					button {
+						background-color: $red;
+					}
+				}
+			}
+		}
+	}
+
+	.about-info-list {
+		padding: 0 16px;
+
+		@include breakpoint(tablet) {
+			padding: 0 20px;
+		}
+	}
+
 	.info {
 		position: relative;
 		text-align: center;
@@ -359,7 +391,7 @@
 			font-family: 'lato-black';
 			text-transform: uppercase;
 			color: $title-color;
-			font-size: 1.6em;
+			font-size: 1.5em;
 			line-height: 100%;
 			
 			@include breakpoint(small-mobile) {
@@ -371,11 +403,11 @@
 			}
 			
 			@include breakpoint(wide) {
-				font-size: 1.8em;
+				font-size: 1.7em;
 			}
 
 			@include breakpoint(laptop) {
-				font-size: 2.2em;
+				font-size: 2em;
 			}
 
 			+ p {
@@ -405,13 +437,13 @@
 		}
 
 		.image-area {
-			height: 100px;
+			height: 70px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			
 			@include breakpoint(small-mobile) {
-				height: 80px;
+				height: 60px;
 			}
 
 			@include breakpoint(tablet) {
@@ -428,7 +460,7 @@
 
 			img {
 				max-height: 100%;
-				max-width: 110px;
+				max-width: 70px;
 				
 				@include breakpoint(tablet) {
 					max-width: 130px;
@@ -516,13 +548,13 @@
 
 		h3 {
 			font-family: 'lato-black';
-			font-size: 2.1em;
+			font-size: 1.8em;
 			text-transform: uppercase;
 			line-height: 100%;
 			color: $title-color;
 			
 			@include breakpoint(small-mobile) {
-				font-size: 2em;
+				font-size: 1.6em;
 			}
 			
 			@include breakpoint(tablet) {

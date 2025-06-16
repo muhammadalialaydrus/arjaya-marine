@@ -280,5 +280,39 @@
 		]
 	});
 
+	$('.about-info .about-info-slider').slick({
+		slidesToShow: 3,
+		arrows: false,
+		dots: true,
+		adaptiveHeight: false,
+		focusOnSelect: true,
+		infinite: false,
+		centerMode: true,
+		centerPadding: '60px',
+		responsive: [
+			{
+				breakpoint: 1500,
+				settings: {
+					centerPadding: '40px',
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 770,
+				settings: {
+					centerPadding: '30px',
+					slidesToShow: 1,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					centerPadding: '0',
+					slidesToShow: 1,
+				}
+			}
+		]
+	});
+
 
 })(jQuery);
