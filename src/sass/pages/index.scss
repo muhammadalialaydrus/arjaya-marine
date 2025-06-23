@@ -499,6 +499,38 @@
 		}
 	}
 
+	.business-info-slider {
+		padding-bottom: 30px;
+		
+		@include breakpoint(wide) {
+			padding-bottom: 0;
+		}
+
+		.slick-dots {
+			bottom: 0;
+
+			li {
+				button {
+					background-color: rgba($black, 0.1);
+				}
+
+				&.slick-active {
+					button {
+						background-color: $red;
+					}
+				}
+			}
+		}
+	}
+
+	.business-info-list {
+		padding: 0 10px;
+		
+		@include breakpoint(tablet) {
+			padding: 0 30px;
+		}
+	}
+
 	.gallery-image {
 		position: relative;
 		height: 0;

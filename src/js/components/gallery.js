@@ -314,5 +314,39 @@
 		]
 	});
 
+	$('.business-info .business-info-slider').slick({
+		slidesToShow: 1,
+		arrows: false,
+		dots: true,
+		adaptiveHeight: false,
+		focusOnSelect: true,
+		infinite: false,
+		centerMode: true,
+		centerPadding: '0',
+		responsive: [
+			{
+				breakpoint: 1500,
+				settings: {
+					centerPadding: '40px',
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 770,
+				settings: {
+					centerPadding: '0',
+					slidesToShow: 1,
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					centerPadding: '0',
+					slidesToShow: 1,
+				}
+			}
+		]
+	});
+
 
 })(jQuery);
